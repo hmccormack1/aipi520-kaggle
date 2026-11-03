@@ -6,7 +6,7 @@ The final model is a rank-average ensemble of gradient boosting, a random forest
 
 ## Getting the data
 
-The data is not in this repo and can be found at this link: https://www.kaggle.com/competitions/classical-music-meets-classical-ml-fall-2026/data. From the main competition page, download the data by going to the "Data" tab, clicking "Download All" to download the zip file, and unzipping it into the folder the scripts are in (the folder will be named for_students/). Make sure the for_students/ folder is next to the scripts and not that the scripts end up within this folder or some other variation:
+The data is not in this repo and can be found at this link: https://www.kaggle.com/competitions/classical-music-meets-classical-ml-fall-2026/data. From the main competition page, download the data by going to the "Data" tab, clicking "Download All" to download the zip file, and unzipping it into the folder the scripts are in (the folder will be named for_students/). Make sure the for_students/ folder is next to the scripts and the scripts don't end up within this folder or some other variation:
 
 ```
 for_students/
@@ -37,7 +37,7 @@ Tested with Python 3 and scikit-learn. Run every script from this folder.
 | `ens2.py` | Second round with a fixed list of candidates, including a logistic regression that also uses zip code features. Writes `submission_gb_lr_zip.csv`. |
 | `final_model.py` | Builds the final ensemble from scratch and writes `submission_final.csv`. |
 
-`final_model.py` reproduces the submission that was selected on Kaggle. Running `ens.py` or `ens2.py` prints many `RuntimeWarning` messages from the logistic regression (divide by zero / overflow in matmul). The scores are unaffected.
+`final_model.py` reproduces the submission that was selected on Kaggle up to tiny numerical differences from library versions. Running `ens.py` or `ens2.py` prints many `RuntimeWarning` messages from the logistic regression (divide by zero / overflow in matmul). The scores are unaffected.
 
 ## Approach
 
