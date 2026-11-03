@@ -1,0 +1,6 @@
+# competition data (download from Kaggle, do not commit)
+for_students/
+*.zip
+# system / python files
+.DS_Store
+__pycache__/
