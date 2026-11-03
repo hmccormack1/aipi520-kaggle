@@ -1,7 +1,9 @@
-# Ensemble test: does averaging different models beat the single gradient boosting model?
-# Uses the baseline features only (the extra groups did not clearly help in cv.py).
-# All models are scored on the SAME folds, so the comparison is fair.
-# Run from the folder that contains for_students/.
+# Second round of candidates, listed before looking at any results: gradient boosting + logistic regression,
+# logistic regression alone with different regularization strengths, and gradient boosting + a logistic
+# regression that also uses zip code features.
+# Rule decided in advance: adopt a candidate only if its mean CV gain over the current ensemble is >= 0.002
+# AND it beats the current ensemble in >= 11 of 15 folds. All candidates use the SAME folds.
+# Run from the folder that contains for_students/. Also writes submission_gb_lr_zip.csv (not the final model).
 
 import pandas as pd
 import numpy as np

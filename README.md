@@ -30,6 +30,7 @@ Tested with Python 3 and scikit-learn. Run every script from this folder.
 
 | Script | What it does |
 |---|---|
+| `baseline.py` | First model: gradient boosting on history features with a small settings grid and one 75/25 validation split. Writes `submission_baseline.csv`. |
 | `eda.py` | Exploratory checks: class balance, missing values, train vs test history coverage, buy rate by group, donation skew, zip code formats. |
 | `cv.py` | Repeated cross-validation (5 folds x 3 repeats) to test whether extra feature groups improve a gradient boosting model. |
 | `ens.py` | Compares single models (gradient boosting, random forest, logistic regression) with rank-average ensembles on the same folds. Writes `submission_ensemble.csv`. |
